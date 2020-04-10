@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+:root {
+  --header: #222831;
+  --form-body: #393e46;
+  --secondary: #00adb5;
+  --text: #eeeeee;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Prompt", sans-serif;
+  font-size: 10px;
+  color: var(--text);
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 173, 181, 0.7),
+      rgba(238, 238, 238, 0.7)
+    ),
+    url(img/startup-planning-notes-mac-book-7357.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: back 20s alternate infinite;
+  animation-timing-function: linear;
+  z-index: -1;
+}
+header {
+  background-color: var(--header);
+  text-align: center;
+  color: white;
+  font-size: 1.9em;
+  line-height: 1.8;
+  opacity: 90%;
+  border-bottom: 0.2em solid var(--secondary);
+  width: 100%;
+}
+main {
+  text-align: center;
+  background-color: var(--form-body);
+  width: 70%;
+  margin: 0 auto;
+  opacity: 90%;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  padding: 2em;
+  border-radius: 1em;
+}
+footer {
+  width: 100%;
+  background-color: var(--secondary);
+  height: 4em;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: var(--text);
+  border-top: 0.2em solid var(--header);
+}
+footer > a {
+  color: var(--text);
+  font-size: 1.6em;
+}
+#survey-form {
+  margin: 0 auto;
+  font-size: 1.8em;
+  width: 80%;
+  text-align: left;
+}
+.parts {
+  display: block;
+  margin-top: 1.2em;
+}
+#email,
+#number,
+#name,
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em;
+  font-family: "Prompt", sans-serif;
+  border: none;
+}
+/* Using Trnasform: scale() to increase or decrese size of chechbox and radio button. */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.4em;
+  transform: scale(1.3);
+}
+#title,
+#description {
+  opacity: 100%;
+}
+.newline {
+  display: block;
+}
+input:focus {
+  box-shadow: 1.5px 1.5px 1.5px 1px 5px var(--secondary);
+}
+#submit {
+  width: 100%;
+  height: 2.5em;
+  border: none;
+  background-color: var(--secondary);
+  color: var(--text);
+  opacity: 1;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+#submit:hover {
+  box-shadow: 1.5px 1.5px 5px var(--text);
+}
+@media screen and (min-width: 700px) {
+  main {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 800px) {
+  main {
+    width: 50%;
+  }
+}
+@keyframes back {
+  50% {
+    transform: scale(1.1);
+    filter: blur(5px);
+    background-image: linear-gradient(
+        115deg,
+        rgba(0, 173, 181, 0.5),
+        rgba(238, 238, 238, 0.5)
+      ),
+      url(img/meeting.jpg);
+  }
+  100% {
+    filter: blur(5px);
+    background-image: linear-gradient(
+        115deg,
+        rgba(0, 173, 181, 0.5),
+        rgba(238, 238, 238, 0.5)
+      ),
+      url(img/whiteboard-sketching-design-planning-7366.jpg);
+  }
+}
