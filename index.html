@@ -20,7 +20,7 @@
     </header>
     <main>
       <div class="form">
-        <form action="#" id="survey-form">
+        <form action="POST" id="survey-form" data-netlify="true">
           <div class="parts">
             <label id="name-label" for="name">Name</label>
             <input
@@ -40,13 +40,14 @@
             />
           </div>
           <div class="parts">
-            <label id="number-label" for="number">Age</label>
+            <label id="number-label" for="nymber">Age</label>
             <input
               max="99"
               min="10"
               type="number"
               id="number"
               placeholder="Enter your age"
+              name="age"
             />
           </div>
           <div class="parts">
@@ -331,15 +332,15 @@
             <label class="newline"
               ><input
                 type="radio"
-                value="value"
-                name="recommend"
+                value="Definitely"
+                name="likeIt"
               />Definitely</label
             >
             <label class="newline"
-              ><input type="radio" value="value" name="recommend" />Maybe</label
+              ><input type="radio" value="Maybe" name="likeIt" />Maybe</label
             >
             <label class="newline"
-              ><input type="radio" value="value" name="recommend" />Not
+              ><input type="radio" value="Not_sure" name="likeIt" />Not
               Sure</label
             >
           </div>
@@ -384,5 +385,6 @@
         ><i class="fa fa-instagram"></i
       ></a>
     </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
